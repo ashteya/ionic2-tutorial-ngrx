@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";  
+import {Component, ChangeDetectionStrategy} from "@angular/core";  
 import {Modal, NavController} from 'ionic-angular';  
 import {Store} from '@ngrx/store';
 import {Observable} from 'rxjs/rx';
@@ -8,7 +8,8 @@ import {Birthday} from '../../models/birthday';
 import {DetailsPage} from '../details/details';  
 
 @Component({
-  templateUrl: 'build/pages/home/home.html'
+  templateUrl: 'build/pages/home/home.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePage {  
     public birthdays: Observable<Birthday[]>;
