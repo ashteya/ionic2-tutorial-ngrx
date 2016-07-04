@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      🎂  Birthdays  🎉
+    </ion-title>
+    <ion-buttons end>
+      <button (click)="showDetail()">
+          <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+      <ion-list inset>
+          <ion-item *ngFor="let birthday of birthdays | async" (click)="showDetail(birthday)">
+            <div item-left>{{ birthday.Name }}</div>
+            <div item-right>{{ birthday.Date | date:'yMMMMd' }}</div>
+          </ion-item>
+       </ion-list>
+</ion-content>
