@@ -30,12 +30,12 @@ export class DetailsPage {
         else {
             this.isNew = false;
             this.action = 'Edit';
-            this.isoDate = this.birthday.Date.toISOString().slice(0, 10);
+            this.isoDate = this.birthday.date.toISOString().slice(0, 10);
         }
     }
 
     save() {
-        this.birthday.Date = new Date(this.isoDate);
+        this.birthday.date = new Date(this.isoDate);
 
         if (this.isNew) {
             this.store.dispatch(this.birthdayActions.addBirthday(this.birthday));
