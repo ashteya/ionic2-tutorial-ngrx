@@ -29,4 +29,28 @@ export class BirthdayActions {
             payload: birthday
         }
     }
+
+    static LOAD_BIRTHDAYS_SUCCESS = 'LOAD_BIRTHDAYS_SUCCESS';
+    loadBirthdaysSuccess(birthdays: Birthday[]): Action {
+        return {
+            type: BirthdayActions.LOAD_BIRTHDAYS_SUCCESS,
+            payload: birthdays
+        }
+    }
+
+    static ADD_UPDATE_BIRTHDAY_SUCCESS = 'ADD_UPDATE_BIRTHDAY_SUCCESS';
+    addUpdateBirthdaySuccess(birthday: Birthday): Action {
+        return {
+            type: BirthdayActions.ADD_UPDATE_BIRTHDAY_SUCCESS,
+            payload: birthday
+        }
+    }
+
+    static DELETE_BIRTHDAY_SUCCESS = 'DELETE_BIRTHDAY_SUCCESS';
+    deleteBirthdaySuccess(id: string): Action {
+        return {
+            type: BirthdayActions.DELETE_BIRTHDAY_SUCCESS,
+            payload: id
+        }
+    }
 }

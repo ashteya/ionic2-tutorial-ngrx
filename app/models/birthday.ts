@@ -1,5 +1,5 @@
 export interface Birthday {
-    id: number;
+    _id: string;
     name: string;
     date: Date;
 }
