@@ -1,9 +1,11 @@
 import {ActionReducer, Action} from '@ngrx/store';
 import {BirthdayActions} from '../actions/birthday.actions';
 
+import {Birthday} from '../models/birthday';
+
 let nextId = 0;
 
-export function BirthdaysReducer(state = [], action) {
+export const BirthdaysReducer: ActionReducer<Birthday[]> = (state: Birthday[] = [], action: Action) => {
     switch(action.type) {
         case BirthdayActions.ADD_BIRTHDAY:
             return [...state, Object.assign({}, action.payload, { id: nextId++ })];
