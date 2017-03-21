@@ -1,7 +1,9 @@
 
 import { Injectable } from '@angular/core';
 import { Effect, toPayload, Actions } from '@ngrx/effects';
-import { Observable } from 'rxjs/rx';
+import { Observable } from 'rxjs/Rx';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/mergeMap';
 
 import { BirthdayService } from '../services/birthday.service';
 import { Birthday } from '../models/birthday';
