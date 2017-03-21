@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy } from "@angular/core";  
 import { ModalController, NavController } from 'ionic-angular';  
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs/rx';
+import { Observable } from 'rxjs/Rx';
 
 import { AppState } from '../../services/app-state';
 import { Birthday } from '../../models/birthday';
